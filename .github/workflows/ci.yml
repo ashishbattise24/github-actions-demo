@@ -29,11 +29,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run unit tests
-         env:
+        env:
           PYTHONPATH: ${{ github.workspace }}
-         run: |
-          pytest -v 
-
+        run: |
+          pytest -v
       - name: Display success message
         run: |
           echo "================================="
